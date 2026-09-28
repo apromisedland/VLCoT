@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "predicate_names": ["drawer_open", "target_held", "target_in_goal"],
+  "camera_names": ["agentview", "wrist"],
+  "mapping": {
+    "actions": "actions",
+    "action_offset": 0,
+    "proprio": ["obs/ee_pos", "obs/ee_ori", "obs/gripper_states"],
+    "images": {"agentview": "obs/agentview_rgb", "wrist": "obs/eye_in_hand_rgb"},
+    "image_encoding": "raw_rgb",
+    "sim_states": "states"
+  },
+  "episodes": [
+    {
+      "id": "demonstration-0000", "path": "demonstrations.hdf5", "group": "/data/demo_0",
+      "task": "drawer_grasp_place", "suite": "libero_10", "benchmark": "libero",
+      "source_trajectory": "demonstration-0000", "instruction": "Open the drawer, grasp the target and place it in the goal container.",
+      "recovery": false
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "benchmark": "libero",
+  "subset_run": true,
+  "provenance": {"source": "https://github.com/Lifelong-Robot-Learning/LIBERO", "revision": "8f1084e3132a39270c3a13ebe37270a43ece2a01"},
+  "environment": {"image_size": 256, "image_transform": "none", "settle_steps": 10},
+  "episodes": [
+    {"id": "libero-long-task0-trial0", "suite": "libero_10", "task": "REPLACE_WITH_PINNED_TASK_NAME", "task_id": 0, "initial_state_index": 0, "seed": 0, "max_steps": 520}
+  ]
+}

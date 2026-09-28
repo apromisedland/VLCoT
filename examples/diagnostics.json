@@ -1,0 +1,7 @@
+{
+  "provenance": {"source": "REPLACE_WITH_INDEPENDENT_DIAGNOSTIC_SET_PROVENANCE"},
+  "cases": [
+    {"id": "before-completion", "trajectory": "annotated-episode.h5", "instruction": "Place the target in the goal container.", "planning_frame": 0, "stage_index": 0, "observation_indices": [0, 4, 8], "completed": false},
+    {"id": "after-completion", "trajectory": "annotated-episode.h5", "instruction": "Place the target in the goal container.", "planning_frame": 0, "stage_index": 0, "observation_indices": [12, 16, 20], "completed": true}
+  ]
+}

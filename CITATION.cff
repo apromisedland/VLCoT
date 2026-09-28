@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: Please cite the VLCoT paper and the upstream models and benchmarks used in your experiments.
+title: 'VLCoT: Stage-Verifiable Latent Reasoning with Local Repair'
+type: software
+version: 0.1.0
+license: MIT
+repository-code: 'https://github.com/apromisedland/VLCoT'
+url: 'https://apromisedland.github.io/vlcot-paper-page/'
+authors:
+  - family-names: Qiang
+    given-names: Yirong
+  - family-names: Zhang
+    given-names: Jiahe
+  - family-names: Zhou
+    given-names: Ming
+  - family-names: Pei
+    given-names: Yuxiu
+  - family-names: Shan
+    given-names: Lianlei

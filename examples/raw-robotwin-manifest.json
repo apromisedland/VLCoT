@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "predicate_names": ["target_held", "target_placed"],
+  "camera_names": ["head", "left_wrist", "right_wrist"],
+  "mapping": {
+    "actions": "joint_action/vector",
+    "action_offset": 1,
+    "proprio": ["joint_action/vector"],
+    "images": {"head": "observation/head_camera/rgb", "left_wrist": "observation/left_camera/rgb", "right_wrist": "observation/right_camera/rgb"},
+    "image_encoding": "legacy_robotwin_jpeg",
+    "predicates": "labels/predicates", "predicate_valid": "labels/predicate_valid",
+    "observable": "labels/observable", "visibility_valid": "labels/visibility_valid"
+  },
+  "episodes": [
+    {
+      "id": "task-demo-0000", "path": "labeled-robotwin-episode.hdf5", "task": "place_object",
+      "suite": "robotwin50", "benchmark": "robotwin", "source_trajectory": "task-demo-0000",
+      "instruction": "Place the target object at the instructed location.", "recovery": false
+    }
+  ]
+}

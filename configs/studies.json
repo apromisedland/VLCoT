@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "status": "Unexecuted recipes. Seed IDs and unspecified settings are engineering defaults.",
+  "seeds": [0, 1, 2],
+  "component_ablations": [
+    {"variant": "base", "strategy": "disabled", "retrain": true},
+    {"variant": "auxiliary", "strategy": "disabled", "retrain": true},
+    {"variant": "no_alignment", "strategy": "local", "retrain": true},
+    {"variant": "no_repair", "strategy": "disabled", "reuse_full_checkpoint": true},
+    {"variant": "full", "strategy": "local", "retrain": true}
+  ],
+  "repair_strategies": ["disabled", "full", "current", "local"],
+  "independent_augmentations": [
+    {"name": "original", "recovery_data": false, "initial_frame": false},
+    {"name": "recovery_data", "recovery_data": true, "initial_frame": false},
+    {"name": "initial_frame", "recovery_data": false, "initial_frame": true}
+  ],
+  "paired_inputs": ["checkpoint", "evaluation_manifest", "cost_profile", "budget", "device", "precision"]
+}

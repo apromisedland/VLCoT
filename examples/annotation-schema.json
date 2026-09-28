@@ -1,0 +1,22 @@
+{
+  "description": "Illustrative drawer/grasp/place schema. Replace task/object names and BDDL path with the recorded task's actual identities.",
+  "predicate_names": ["drawer_open", "target_held", "target_in_goal"],
+  "tasks": {
+    "drawer_grasp_place": {
+      "bddl_file": "task.bddl",
+      "stable_frames": 3,
+      "predicates": {
+        "drawer_open": {"kind": "bddl", "relation": "open", "objects": ["drawer"], "visibility_objects": ["drawer"], "visibility_rule": "all_objects_visible_proxy"},
+        "target_held": {"kind": "grasp", "object": "target", "visibility_objects": ["target"], "visibility_rule": "all_objects_visible_proxy"},
+        "target_in_goal": {"kind": "bddl", "relation": "in", "objects": ["target", "goal_region"], "visibility_objects": ["target", "goal_container"], "visibility_rule": "all_objects_visible_proxy"}
+      },
+      "events": [
+        {"name": "open", "when": [{"predicate": "drawer_open", "value": 1}], "effects": [{"predicate": "drawer_open", "value": 1}], "requires": [], "releases": []},
+        {"name": "grasp", "when": [{"predicate": "target_held", "value": 1}], "effects": [{"predicate": "target_held", "value": 1}], "requires": [{"predicate": "drawer_open", "value": 1}], "releases": []},
+        {"name": "place", "when": [{"predicate": "target_in_goal", "value": 1}, {"predicate": "target_held", "value": 0}], "effects": [{"predicate": "target_in_goal", "value": 1}, {"predicate": "target_held", "value": 0}], "requires": [{"predicate": "target_held", "value": 1}], "releases": ["target_held"]}
+      ],
+      "goal_conditions": [{"predicate": "target_in_goal", "value": 1}],
+      "terminal_requires": [{"predicate": "target_in_goal", "value": 1}]
+    }
+  }
+}
